@@ -50,7 +50,7 @@
                             <div class="col-xl-3 col-lg-2">
                                 <div class="logo">
                                     <a href="{{ route('home') }}">
-                                    <h4 style="color:aliceblue;">Student CoLoCo</h4>
+                                    <h4 style="color:aliceblue;">CoLoCo</h4>
 
                                 </div>
                             </div>
@@ -95,6 +95,15 @@
                         <a style="color: white;" class="nav-link aColor" href="{{ url('/demande') }}">Demande</a>
                     </li>
                 </ul>
+                <li class="nav-item">
+                        <a style="color: white;" class="nav-link aColor" href="{{ url('/mesOffres') }}">Mes Offres</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                        <a style="color: white;" class="nav-link aColor" href="{{ url('/mesDemandes') }}">Mes Demandes</a>
+                    </li>
+                </ul>
                 <ul class=" navbar-nav my-2 my-lg-0">
                     <li class="nav-item" style="text-align: center;">
                         <a style="color: white; margin-bottom: -12px;" class="nav-link aColor">
@@ -103,14 +112,15 @@
                         
 
                     </li>
+
                    
                 </ul>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item">
-                <a class="small" href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                <a class="small" href="{{ route('logout') }}"  onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                Logout <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             @csrf
-                        </form>                    </li>
+                        </form>       </a>             </li>
                 </ul>
             </div>
         </div>

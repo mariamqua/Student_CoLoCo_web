@@ -14,19 +14,15 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/mesDemandes','DemandeController@user_demandes')->name('profile.demande');
-Route::get('/mesOffres','OffreController@user_offres')->name('profile.demande');
+Route::get('/mesOffres','OffreController@user_offres')->name('profile.offre');
 
 Route::resource('/demande', 'DemandeController');
 Route::resource('/offre', 'OffreController');

@@ -23,6 +23,12 @@ class DemandeApiController extends Controller
 
     public function store(Request $request){
         
+       // $demandes = new Demande($request);
+
+
+        $request->budjetmax = floatval($request->budjetmax);
+
+        
         $created=Demande::create($request->all());
         
     }

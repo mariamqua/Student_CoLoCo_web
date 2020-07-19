@@ -12,18 +12,18 @@
                      <div class="quality_quantity d-flex">
                          <div class="single_quantity">
                              <img src="img/svg_icon/color_box.svg" alt="">
-                             <span>Superficié : {{ $offre->superficie}} Sqft</span>
+                             <span></span>
                          </div>
                          <div class="single_quantity">
                              <img src="img/svg_icon/color_bed.svg" alt="">
-                             <span>{{ $offre->capacite}} personnes</span>
+                             <span></span>
                          </div>
                      </div>
                  </div>
              </div>
              <div class="col-xl-6 col-md-4 col-lg-6">
                  <div class="prise_quantity">
-                     <h4>{{ $offre->prix}} MAD</h4>
+                     <h4></h4>
                  </div>
              </div>
          </div>
@@ -45,13 +45,40 @@
                              <img src="img/banner/property_details.png" alt="">
                          </div>
                          <div class="single_property">
-                         <img src="{{url('/public/storage/uploads/offres_images/'.$offre->image)}}">
                          </div>
                      </div>
                  </div>
              </div>
              <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
                  <div class="details_info">
+                 <div class="col-xl-6 col-md-4 col-lg-6">
+                 <div class="comfortable_apartment">
+                         <div class="single_quantity">
+                             <img src="img/svg_icon/color_box.svg" alt="">
+                             <span>Superficié : {{ $offre->superficie}} Sqft</span><br>
+                         </div>
+                         <div class="single_quantity">
+                             <img src="img/svg_icon/color_bed.svg" alt="">
+                             <span>Capacité : {{ $offre->capacite}} personnes</span><br>
+                         </div>
+                         <div class="single_quantity">
+                             <img src="img/svg_icon/color_bed.svg" alt="">
+                             <span>Téléphone : {{ $offre->tel}} </span><br>
+                         </div>
+                         <div class="single_quantity">
+                             <img src="img/svg_icon/color_bed.svg" alt="">
+                             <span>Adresse : {{ $offre->adresse}} </span><br><br>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-xl-6 col-md-4 col-lg-6">
+                 <div class="prise_quantity">
+                     <h4 style="color:orange;">{{ $offre->prix}} MAD</h4>
+                 </div>
+             </div>
+                 <img src="{{url('/public/storage/uploads/offres_images/'.$offre->image)}}">
+
                      <br><hr><br>
                      <h4>Description:</h4>
                      <p>
